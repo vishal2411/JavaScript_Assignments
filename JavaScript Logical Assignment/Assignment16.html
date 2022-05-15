@@ -1,0 +1,42 @@
+ <html>
+ <head>
+	  <title>Assignment16</title>
+	
+	   <style type="text/css"> 
+		  body {margin: 30px;} 
+	   </style> 
+ </head>
+
+ <body>
+ 
+    <table id="myTable" border="1">   </table>
+	
+	<form> 
+		<input type="button" onclick="createTable()" value="Create the table"> 
+	</form>
+ 
+	 <script>
+	 		
+		function createTable()
+		{
+		  tr = window.prompt("Input number of rows");
+		  td = window.prompt("Input number of columns");
+			  
+		  for(var i=0; i < tr; i++)
+		  {
+			var x = document.getElementById('myTable').insertRow(i);
+				   
+			for(var j=0; j < td ; j++)  
+			{
+				var y=  x.insertCell(j);
+				y.innerHTML= "(Row, Column) = (" + i + ", " + j + ")"; 
+			}
+		   }
+		 }
+		
+	 </script>
+	 
+ </body>
+ </html>
+	 
+	

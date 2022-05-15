@@ -1,0 +1,39 @@
+ <html>
+ <head>
+	  <title>Assignment7</title>
+ </head>
+
+ <body>
+     <h2>Display the List</h2>
+	 <script>
+	 		
+		var dollar = window.prompt("Enter Dollar: ");
+			
+		displaylist(dollar);
+		
+		function displaylist(dollar){
+		 
+		var rupee = dollar * 74.28;
+		
+		document.write("Rupees : " + rupee + "<br>");
+		 
+		var yen = dollar * 109.14;
+		
+		document.write("Yen : " + yen + "<br>");
+		
+		var euro = dollar * 0.84;
+		
+		document.write("Euro : " + euro + "<br>");
+		
+		var pound = dollar * 0.72;
+
+        document.write("Pound sterling :" + Math.round(pound) );		
+		    
+		}
+		
+	 </script>
+	 
+ </body>
+ </html>
+	 
+	

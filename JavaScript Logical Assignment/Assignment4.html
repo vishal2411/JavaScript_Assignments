@@ -1,0 +1,34 @@
+ <html>
+ <head>
+	  <title>Assignment4</title>
+ </head>
+
+ <body>
+     <h2>Print Heads Ratio</h2>
+	 <script>
+	 		
+		var Noflips = window.prompt("Enter Number of Flips =");
+		var res = headsRatio(Noflips);
+		
+		document.write(res);
+ 
+		function headsRatio(flips) {
+		 
+		 var count = 0, output;
+		 
+		    for(var i=0; i<flips; i++)
+			{
+				if(Math.floor(Math.random() * 2) == 0){
+				   count++;				
+				}
+			}
+		  
+			output = count/flips;
+			return output;
+		}
+	 </script>
+	 
+ </body>
+ </html>
+	 
+	

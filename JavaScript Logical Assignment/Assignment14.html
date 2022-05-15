@@ -1,0 +1,59 @@
+ <html>
+ <head>
+	  <title>Assignment14</title>
+ </head>
+
+ <body>
+     <h2>Array Containing Rendom Number</h2>
+	 
+	 <script>
+	 
+	   	 var arr = [1,2,3,4,5,6,8,9,100]; 
+		 var largest = arr[0];
+         var smallest = arr[0];
+		 var len = arr.length;
+		 var evenCount =0;
+		 var oddCount =0;
+		 var sum =0;
+		 
+		 for (var i = 0; i < len; i++) {
+		 	 
+		    // Larget number
+			if (largest < arr[i] ) 
+				largest = arr[i];
+				
+		    // Smallest Number
+			if (smallest > arr[i])
+			    smallest = arr[i];
+				
+			// Getting count for even and odd	
+			if((arr[i] % 2) == 0)
+             evenCount++;	
+            else
+			 oddCount++;
+			 
+			sum += arr[i];
+		}
+		
+		 avg = sum / len;
+		 	
+		 document.write("Print Largest Number : " + largest + "<br>");
+		 document.write("Print Smallest Number : " + smallest + "<br>");
+		 
+		 if(evenCount > oddCount)
+		   document.write("Print Even Count : " + evenCount + "<br>");
+		 else
+		   document.write("Print Odd Count : "+ oddCount + "<br>");
+		   
+		 document.write("Print Sum of Array :" + sum + "<br>");
+		 
+		 document.write("Print Average of Array : " + Math.round(avg));
+		 
+	 </script>
+	
+	 
+ </body>
+ </html>
+	 
+
+	
