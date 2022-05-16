@@ -1,0 +1,44 @@
+
+<html>
+
+<head>
+  <title> Assignment2 </title>
+
+</head>
+
+ <body>
+
+  <h1> Area of Rectangle  </h1>
+
+	<script>
+
+		class Rectangle {
+
+		   constructor(height, width) {
+			this.height = height;
+			this.width = width;
+		  }
+		  
+		}
+		
+		
+		// Added getArea as a prototype property
+		  Rectangle.prototype.getArea = function() {
+			return (this.height * this.width);
+		  };
+
+
+		// Object Creation
+		const rect = new Rectangle(7, 10);
+
+		document.write("Height of Rectangle is: " + rect.height + "<br>");
+		document.write("Width of Rectangle is : " + rect.width + "<br><br>");
+
+		var area = rect.getArea();
+		document.write("Area of rectangle is : " + area);
+		
+	</script>
+
+ </body>
+
+</html>
