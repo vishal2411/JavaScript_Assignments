@@ -1,0 +1,95 @@
+<html>
+
+<head> 
+
+<title>  </title>
+
+</head>
+
+<body>
+
+<script>
+
+	// Created funnction 
+	function Person(firstName,lastName,age,skills,dateOfbirth,address,married,profession)
+	{
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.skills = skills;
+		this.dateOfbirth = dateOfbirth;
+		this.address = address;
+		this.married = married;
+		this.profession = profession;
+	}
+
+	// Created Object 1
+	person1 = new Person("Vishal", "Dixit", 23, ['C','C#'], "24/11/1997", {city:"Nagpur", pincode:440018},"false","AnalystA4");
+	
+	// Created Object 2
+	person2 = new Person("Muskan","Dixit",20 ,["HTML","CSS"], "02/02/1999",{city:"Pune",pincode:440014},"false","AnalystA10");
+
+
+	// Print Output
+	document.write("<br> Person 1 Details : <br>");
+	
+	document.write( "<br>First Name : " + person1.firstName + 
+					"<br> Last Name: " + person1.lastName + 
+					"<br> Age: " + person1.age + 
+					"<br> Skills : " + person1.skills +
+					"<br> Date of Birth: " + person1.dateOfbirth + 
+					"<br> City : " + person1.address.city + 
+					"<br> Pincode: " + person1.address.pincode + 
+					"<br> Married " + person1.married + 
+					"<br> Profession : " + person1.profession);
+		
+	document.write("<br><br> Person 2 Details: <br>");
+	
+	document.write( "<br>First Name : " + person2.firstName + 
+					"<br> Last Name: " + person2.lastName + 
+					"<br> Age: " + person2.age + 
+					"<br> Skills : " + person2.skills +
+					"<br> Date of Birth: " + person2.dateOfbirth + 
+					"<br> City : " + person2.address.city + 
+					"<br> Pincode: " + person2.address.pincode + 
+					"<br> Married " + person2.married + 
+					"<br> Profession : " + person2.profession);
+	
+	//printing the object using Global print method.
+
+	print = function()       
+	{
+	
+	
+		document.write("<br><br> ------------Printing the Details of Object using Print()------- <br>");
+		document.write("<br> Person 1 Details : <br>");
+		
+		document.write( "<br>First Name : " + person1.firstName + 
+						"<br> Last Name: " + person1.lastName + 
+						"<br> Age: " + person1.age + 
+						"<br> Skills : " + person1.skills +
+						"<br> Date of Birth: " + person1.dateOfbirth + 
+						"<br> City : " + person1.address.city + 
+						"<br> Pincode: " + person1.address.pincode + 
+						"<br> Married " + person1.married + 
+						"<br> Profession : " + person1.profession);
+			
+		document.write("<br><br> Person 2 Details: <br>");
+		
+		document.write( "<br>First Name : " + person2.firstName + 
+						"<br> Last Name: " + person2.lastName + 
+						"<br> Age: " + person2.age + 
+						"<br> Skills : " + person2.skills +
+						"<br> Date of Birth: " + person2.dateOfbirth + 
+						"<br> City : " + person2.address.city + 
+						"<br> Pincode: " + person2.address.pincode + 
+						"<br> Married " + person2.married + 
+						"<br> Profession : " + person2.profession)
+		}();
+	
+</script>
+
+</body>
+
+
+</html>

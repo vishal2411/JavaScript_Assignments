@@ -1,0 +1,127 @@
+<html>
+
+<head> 
+
+<title>  </title>
+
+</head>
+
+<body>
+
+<script>
+
+	function Account(accountNumber,accountHolderName,accountBalance) 
+	{
+		this.accountNumber = accountNumber;
+		this.accountHolderName = accountHolderName;
+		this.accountBalance = accountBalance;
+	}
+	
+	function Savings(isSalary, accountNumber, accountHolderName, accountBalance)
+	{
+		this.isSalary = isSalary;
+		this.accountNumber = accountNumber;
+		this.accountHolderName = accountHolderName;
+		this.accountBalance = accountBalance;
+		
+		this.withdraw = function(amount)
+		{
+			if(this.accountBalance > 0 && this.accountBalance < 100)
+			{
+				document.write("Insuffient balance! You have less than 100 rs.");
+			} 
+			if(this.accountBalance >= 100)
+			{
+				this.accountBalance = this.accountBalance - amount;
+				document.write("Your money after debiting : " + this.accountBalance);
+			}
+			
+			if(this.accountBalance <= 0)
+			{
+				document.write("ATM says! I cant give you the money, Please deposit some amount to withdraw later, Now Please goo!");
+			}
+		};
+		
+		this.getCurrentBalance = function()
+		{
+			document.write("Your current Account balance is : " + this.accountBalance);
+		};
+	}
+	
+	function Current(odLimit,accountNumber,accountHolderName,accountBalance)
+	{
+		this.odLimit = odLimit;
+		this.accountNumber = accountNumber;
+		this.accountHolderName = accountHolderName;
+		this.accountBalance = accountBalance;
+		
+		this.withdraw = function(amount)
+		{
+			if(odLimit > 500)
+			{
+				if((this.accountBalance > 500 && this.accountBalance < 2000) && amount === 200 || amount === 500)
+				{
+					this.accountBalance = this.accountBalance - amount;
+					document.write("Your balance after debiting the money is : "+ this.accountBalance);
+				}
+				if((this.accountBalance > 2000) && amount=== 200 || amount === 500 || amount === 2000)
+				{
+					this.accountBalance = this.accountBalance - amount;
+					document.write("Your balance after debiting the money is : " +this.accountBalance);
+				}
+			} 
+			else
+			{  
+				document.write("Your odLimit for Current acocunt is less than 500");
+			}  
+		};
+		this.getCurrentBalance = function()
+		{
+			document.write("Your current Account balance is : " + this.accountBalance);
+		};
+		   
+	}
+	
+	// Created Account Object
+	var obj1 = new Account(2001,"Vishal",10000);
+	
+	document.write("--- Account Details -- <br>");
+	document.write("<br> Account Number : " + obj1.accountNumber + 
+				   "<br> AccountHolder Name : " + obj1.accountHolderName + 
+				   "<br> Account Balance : " + obj1.accountBalance);
+		
+	//creating Savings object
+	var objSavings = new Savings("true", 2001 , "Vishal", 10000); 
+	
+    document.write("<br><br> ---- Saving Account Details : --- <br>");
+
+	document.write( "<br> Is Salary: " + objSavings.isSalary + 
+					"<br> Account Number : "+ objSavings.accountNumber + 
+					"<br> AccountHolder Name: " + objSavings.accountHolderName + 
+					"<br> Account Balance: "+ objSavings.accountBalance);
+	
+	
+	document.write("<br><br> Amount to be Withdrawn: 500 <br>");
+	document.write(objSavings.withdraw(500) + "<br>");
+	document.write(objSavings.getCurrentBalance());
+
+    //creating Current object
+	var objCurrent = new Current(100,2001,"Vishal",10000); 
+	
+	document.write("<br><br> --- Current Account Details :---  <br>");
+	
+	document.write("<br> Od Limit : " + objCurrent.odLimit + 
+				   "<br> Account Number : " + objCurrent.accountNumber + 
+				   "<br> AccountHolderName:  " + objCurrent.accountHolderName + 
+				   "<br> Account Balance: " + objCurrent.accountBalance );
+	
+	document.write("<br><br> Amount to be Withdrawn: 1000 <br>");
+	document.write(objCurrent.withdraw(1000));
+	document.write(objCurrent.getCurrentBalance());
+	
+</script>
+
+</body>
+
+
+</html>

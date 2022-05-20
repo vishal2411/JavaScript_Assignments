@@ -1,0 +1,75 @@
+<html>
+
+<head> 
+
+<title>  </title>
+
+</head>
+
+<body>
+
+<script>
+
+	// Created Function 
+	function Person(firstName,lastName,age,skills,dateOfbirth,address,married,profession)
+	{
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.skills = skills;
+		this.dateOfbirth = dateOfbirth;
+		this.address = address;
+		this.married = married;
+		this.profession = profession;
+	}
+
+	// Created 3 Object - Amitabh, Abhishek, Aradhya
+	
+	Amithabh = new Person("Amithabh","Bacchan",99,['java','c#'],"01/01/1947",{city:"Bangalore",pincode:67856},"false","AnalystA4");
+
+	Abhishek = new Person("Abhishek",55,["html","css"],"05/06/1975","false","JrAnalyst");
+
+	Aaradhya = new Person("Aaradhya",10,"01/01/2005","false","film");
+
+    //inheriting the common properties/storing Amithabh object in Abhishek
+	var Abhishek = Object.create(Amithabh); 
+	
+	//it has become Heirarchical inheritance now--> Amithabh is a supermost class 
+	var Aaradhya = Object.create(Abhishek);
+	
+	print = function()
+	{
+		document.write("<br> Amitabh Details : <br>");
+
+		document.write( "<br>First Name : " + Amithabh.firstName + 
+						"<br> Last Name: " + Amithabh.lastName + 
+						"<br> Age: " + Amithabh.age + 
+						"<br> Skills : " + Amithabh.skills +
+						"<br> Date of Birth: " + Amithabh.dateOfbirth + 
+						"<br> City : " + Amithabh.address.city + 
+						"<br> Pincode: " + Amithabh.address.pincode + 
+						"<br> Married " + Amithabh.married + 
+						"<br> Profession : " + Amithabh.profession);
+					
+		document.write("<br><br> Abhishek Details : <br>");
+		
+		document.write(" <br> Last Name : " + Abhishek.lastName );
+		document.write(" <br> City :  " + Abhishek.address.city);
+		document.write(" <br> Pincode: " + Abhishek.address.pincode);
+		
+	     document.write("<br><br> Aradhya Details : <br>");
+
+		document.write(" <br> Last Name : " + Aaradhya.lastName);
+		document.write( " <br> Skills: " + Aaradhya.skills);
+		document.write(" <br> City : " + Aaradhya.address.city);
+		document.write(" <br> Pincode: " + Aaradhya.address.pincode );
+		document.write(" <br> Profession : " + Aaradhya.profession);
+	}();
+
+	
+</script>
+
+</body>
+
+
+</html>
